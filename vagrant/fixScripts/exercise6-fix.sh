@@ -18,6 +18,6 @@ arg=`echo ${array[i]}|rev | cut -d '/' -f1 | rev `
 size=`grep $arg scp$i.log | cut -d '%' -f3 | awk '{print $1}'| tail -1`
 sum=$(($sum+$size))
 done
-echo $sum
 rm scp*
 rm typescript
+echo $sum
